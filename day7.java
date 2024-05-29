@@ -16,3 +16,21 @@ class Solution {
         return sum;
     }
 }
+//Jewels and stones:https://leetcode.com/problems/jewels-and-stones/
+class Solution {
+    public int numJewelsInStones(String jewels, String stones) {
+        Set<Character>je=new HashSet<>();
+        for(int i=0;i<jewels.length();i++)
+        {
+            je.add(jewels.charAt(i));
+        }
+        int c=0;
+        for(int i=0;i<stones.length();i++)
+        {
+            if(je.contains(stones.charAt(i)))
+            c++;
+        }
+        return c;
+        
+    }
+}
